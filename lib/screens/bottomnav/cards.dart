@@ -12,13 +12,14 @@ class _CardsState extends State<Cards> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
+        elevation: 1,
         title: const Text(
           'Cards',
           style: TextStyle(color: Colors.black),
         ),
-        automaticallyImplyLeading: false,
         centerTitle: true,
-        backgroundColor: Colors.white10,
       ),
       body: const Padding(
         padding: EdgeInsets.all(15.0),

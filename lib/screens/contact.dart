@@ -67,6 +67,7 @@ class _ContactState extends State<Contact> {
                   style: TextStyle(color: Colors.grey, fontSize: 15),
                 ),
                 ListView.builder(
+                    primary: false,
                     shrinkWrap: true,
                     itemCount: contact.length,
                     itemBuilder: (context, index) {
