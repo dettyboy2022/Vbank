@@ -33,11 +33,88 @@ class _AnalyticsState extends State<Analytics> {
             const SizedBox(
               height: 15,
             ),
-            const TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Universal Savings Account - 1003153030',
-                  suffixIcon: Icon(Icons.arrow_circle_down)),
+            GestureDetector(
+              onTap: () {
+                showModalBottomSheet(
+                    elevation: 8,
+                    backgroundColor: Colors.white,
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20))),
+                    context: context,
+                    builder: (context) {
+                      return SizedBox(
+                        height: 400,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    'Select Account',
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  const SizedBox(
+                                    height: 15,
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Colors.purple,
+                                    ),
+                                    height: 150,
+                                    width: 370,
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(20.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Universal Savings Account - 1003153030',
+                                            style: TextStyle(fontSize: 17),
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text(
+                                            'Available balance: \$14,500',
+                                            style: TextStyle(fontSize: 17),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    });
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    border: Border.all()),
+                height: 60,
+                width: double.infinity,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      'Universal Savings Account - 1003153030',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    Icon(Icons.arrow_circle_down)
+                  ],
+                ),
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -48,7 +125,7 @@ class _AnalyticsState extends State<Analytics> {
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.black87,
               ),
-              height: 300,
+              height: 350,
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,37 +152,20 @@ class _AnalyticsState extends State<Analytics> {
                     thickness: 1,
                     color: Colors.grey,
                   ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                    ),
+                    height: 180,
+                    width: double.infinity,
+                  ),
                 ],
               ),
             ),
-            // ElevatedButton(
-            //     onPressed: () {
-            //       showBottomSheet(
-            //           backgroundColor: Colors.green,
-            //           shape: const RoundedRectangleBorder(
-            //               borderRadius: BorderRadius.only(
-            //                   topLeft: Radius.circular(20),
-            //                   topRight: Radius.circular(20))),
-            //           context: context,
-            //           builder: (context) {
-            //             return Padding(
-            //               padding: const EdgeInsets.all(20),
-            //               child: Row(
-            //                 children: [
-            //                   Column(
-            //                     children: const [
-            //                       Text('gegegegegge'),
-            //                       Text('gegegegegge'),
-            //                       Text('gegegegegge'),
-            //                       Text('gegegegegge'),
-            //                     ],
-            //                   ),
-            //                 ],
-            //               ),
-            //             );
-            //           });
-            //     },
-            //     child: const Text('ggfgfgf'))
           ],
         ),
       ),

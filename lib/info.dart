@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:iconsax/iconsax.dart';
 import 'package:vbank/screens/bottomnav/analytics.dart';
 import 'package:vbank/screens/bottomnav/cards.dart';
 import 'package:vbank/screens/bottomnav/feed.dart';
@@ -39,16 +39,15 @@ class _MyWidgetState extends State<MyWidget> {
         unselectedItemColor: Colors.black,
         selectedItemColor: const Color.fromARGB(255, 198, 36, 227),
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Feed'),
+          BottomNavigationBarItem(icon: Icon(Iconsax.home), label: 'Feed'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.analytics),
-            label: 'Analytics',
+            icon: Icon(Iconsax.more5),
+            label: 'More',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.payment), label: 'Payments'),
+          BottomNavigationBarItem(icon: Icon(Iconsax.card), label: 'Payments'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.contact_emergency), label: 'Contact'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.card_travel_sharp), label: 'Cards'),
+              icon: Icon(Iconsax.convert_card), label: 'Contact'),
+          BottomNavigationBarItem(icon: Icon(Iconsax.card5), label: 'Cards'),
         ],
       ),
     );

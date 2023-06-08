@@ -102,7 +102,7 @@ class Virtual extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: Colors.grey[300],
         ),
-        height: 160,
+        height: 170,
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,16 +120,19 @@ class Virtual extends StatelessWidget {
             ),
             const Text('04/24'),
             const SizedBox(
-              height: 20,
+              height: 24,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'AYOMIDE',
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
                 ),
-                Icon(Icons.card_giftcard_sharp)
+                Image.asset(
+                  'assets/verve.png',
+                  width: 38,
+                )
               ],
             )
           ],
@@ -144,7 +147,14 @@ class Physical extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          'No Physical Card Availbale!',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+        ),
+      ),
+    );
   }
 }
 
@@ -153,6 +163,13 @@ class Others extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          'No cards found',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+        ),
+      ),
+    );
   }
 }
